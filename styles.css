@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+*{
+box-sizing: border-box;
+}
+
+body{
+background-color: rgb(45, 44, 44);
+color:white;
+font-family:"Press Start 2P", sans-serif;
+}
+
+.container{
+padding-top: 10%;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.title{
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 18px;
+font-weight: bold;
+}
+
+.icons-container{
+display: grid;
+grid-template-columns: 0.5fr 0.5fr 0.5fr;
+margin: 20px 10px;
+}
+
+.move-icon{
+background-color: white;
+width:50px;
+height:50px;
+border-radius: 50px;
+padding:8px;
+}
+
+.move-button{
+display:flex;
+justify-content: center;
+align-items: center;
+background-color: white;
+border: 3px solid white;
+width:120px;
+height:120px;
+border-radius: 60px;
+margin:5px;
+cursor:pointer;
+}
+
+.move-button:hover{
+border: 3px solid rgb(141, 2, 2);
+transition: border 0.4s;
+}
+
+.results-container{
+display: grid;
+grid-template-rows: 1fr 1fr;
+}
+
+.result {
+display:grid;
+justify-content: center;
+align-items: center;
+font-weight: bold;
+font-size: 20px;
+}
+
+.player-move, .computer-move{
+font-size: 13px;
+}
+
+.player-move i, .computer-move i{
+display: inline-block; 
+vertical-align: -2px;
+padding-right: 10px;
+}
+
+.score{
+margin-top:20%;
+font-size:11.5px;
+}
+
+.buttons-container{
+display: grid;
+grid-template-columns: auto auto;
+column-gap: 20px;
+}
+
+.reset-score-button, .auto-play-button{
+background-color: white;
+border:none;
+font-size:15px;
+padding: 8px 15px;
+
+cursor:pointer;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.reset-score-button:hover, .auto-play-button:hover{
+color: white;
+background-color: rgb(45, 44, 44);
+border:2px solid white;
+transition: background-color 0.4s, color 0.4s;
+}
+
+@media screen and (min-width: 576px){
+    .container{
+    padding-top: 5%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh;
+    }
+
+    .title{
+    font-size: 35px;
+    font-weight: bold;
+    }
+        
+    .move-icon{
+    width:80px;
+    height:80px;
+    padding:8px;
+    }
+        
+    .move-button{
+    width:150px;
+    height:150px;
+    border-radius: 100px;
+    }
+        
+    .move-button:hover{
+    border: 4px solid rgb(141, 2, 2);
+    }
+        
+    .results-container{
+    grid-template-rows: 0.3fr 0.7fr;
+    }
+
+    .result {
+    font-size:35px;
+    }
+        
+    .player-move, .computer-move{
+    font-size: 20px;
+    }
+        
+    .score{
+    margin-top:0%;
+    font-size: 16px;
+    }
+        
+    .reset-score-button, .auto-play-button{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:20px;
+    padding: 8px 15px;
+    }
+}
